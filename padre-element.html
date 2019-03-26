@@ -1,0 +1,43 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../mi-polymer/mi-polymer.html">
+<dom-module id="padre-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+<paper-toolbar>
+  <paper-icon-button slot="top" icon="menu" on-tap="menuAction"></paper-icon-button>
+  <div slot="top" class="title">Title</div>
+  <paper-icon-button slot="top" icon="more-vert" on-tap="moreAction"></paper-icon-button>
+</paper-toolbar>
+<paper-button toggles raised class="green" >Lista</paper-button>
+<paper-button toggles raised class="green">Tabla</paper-button>
+  </template>
+
+  <script>
+    /**
+     * `padre-element`
+     *
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PadreElement extends Polymer.Element {
+      static get is() { return 'padre-element'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'padre-element'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PadreElement.is, PadreElement);
+  </script>
+</dom-module>
